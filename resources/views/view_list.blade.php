@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <title>Laravel</title>
+        <title>{{env('APP_NAME', 'Laravel')}}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
-                background: black!important;
+                background: rgb(27, 158, 136)!important;
             }
             table {
                 background: white!important;
@@ -29,7 +29,7 @@
     <body class="antialiased">
      <div class="container">
          <div class="text-right">
-             <a href="create" class="btn btn-primary">Creat New Liste</a>
+             <a href="create" class="text-center btn btn-primary">Creat New Liste</a>
          </div>
          <table class="table">
     <tr>
@@ -39,7 +39,7 @@
       <th >Action</th>
     </tr>
 
-    
+
         @foreach ($todo_arr as $td)
         <tr>
         <td>{{$td->id}}</td>
@@ -48,11 +48,11 @@
         <td><a href="delete/{{$td->id}}">Delete</a> | <a href="edit/{{$td->id}}">Edit</a></td>
       </tr>
         @endforeach
-   
-   
+
+
 </table>
      </div>
-        
+
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
